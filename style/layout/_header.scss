@@ -1,0 +1,69 @@
+@import "../abstracts/variables";
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background: $primary-color;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  z-index: 100;
+  position: sticky;
+  top: 0;
+  bottom: 0;
+}
+
+@mixin textbar {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: $accent-color;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+
+    a {
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      color: $secondary-color;
+      transition: 0.3s ease;
+
+      &:hover {
+        color: $accent-color;
+
+        &::after {
+          @include textbar();
+        }
+      }
+    }
+
+    .active {
+      color: $secondary-color;
+
+      &::after {
+        @include textbar();
+      }
+    }
+  }
+}
+
+#mobile {
+  display: none;
+  align-items: center;
+}
+
+#close {
+  display: none;
+}

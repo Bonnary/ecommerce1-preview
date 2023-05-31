@@ -1,0 +1,71 @@
+@import "../abstracts/variables";
+
+#page-header.blog-header {
+    background-image: url("../img/banner/b19.jpg");
+}
+
+#blog {
+    padding: 150px 150px 0 150px;
+
+    .blog-box {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        padding-bottom: 90px;
+
+        h1 {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            font-size: 70px;
+            font-weight: 700;
+            color: rgba($secondary-color, .1);
+            z-index: -9;
+        }
+    }
+
+    .blog-img {
+        width: 50%;
+        margin-right: 40px;
+    }
+
+    img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .blog-details {
+        width: 50%;
+
+        a {
+            text-decoration: none;
+            font-size: 11px;
+            color: $secondary-color;
+            font-weight: 700;
+            position: relative;
+            transition: 0.3s;
+
+            &::after {
+                content: "";
+                width: 50px;
+                height: 1px;
+                background-color: $secondary-color;
+                position: absolute;
+                top: 4px;
+                right: -60px;
+
+                &:hover {
+                    color: $accent-color;
+                }
+            }
+
+            &:hover {
+                color: $accent-color;
+            }
+        }
+
+
+    }
+}

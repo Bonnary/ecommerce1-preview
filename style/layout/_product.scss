@@ -1,0 +1,76 @@
+@import "../abstracts/variables";
+
+#product1 {
+    text-align: center;
+
+    .pro-container {
+
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-top: 20px;
+    }
+
+    .pro {
+        width: 23%;
+        min-width: 250px;
+        padding: 10px 12px;
+        border: 1px solid rgba($accent-color, .1);
+        border-radius: 25px;
+        box-shadow: 20px 20px 30px rgba($secondary-color, 0.05);
+        margin: 15px 0;
+        transition: 0.2s ease;
+        position: relative;
+
+        img {
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        &:hover {
+            box-shadow: 20px 20px 30px rgba($secondary-color, 0.1);
+        }
+
+        .des {
+            text-align: start;
+            padding: 10px 0;
+
+            span {
+                color: lighten($secondary-color, 50%);
+                font-size: 12px;
+            }
+
+            h5 {
+                padding-top: 7px;
+                color: rgba($secondary-color, 0.8);
+                font-size: 14px;
+            }
+
+            i {
+                font-size: 12px;
+                color: $star-color;
+            }
+
+            h4 {
+                padding-top: 7px;
+                font-size: 15px;
+                font-weight: 700;
+                color: $accent-color;
+            }
+        }
+
+        .card {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50px;
+            background-color: rgba($accent-color, .1);
+            font-weight: 500;
+            color: $accent-color;
+            border: 1px solid rgba($accent-color, .2);
+            position: absolute;
+            bottom: 20px;
+            right: 10px;
+        }
+    }
+}
